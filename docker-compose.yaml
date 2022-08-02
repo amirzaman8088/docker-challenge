@@ -6,5 +6,6 @@ services:
     build: .
     ports:
       - 8081:8080
+      - 8085:8085
     volumes:
-      - ./src/main/resources/config/application.properties:/docker-challenge/config/application.properties
+      - ./src/main/resources/config:/docker-challenge/config
