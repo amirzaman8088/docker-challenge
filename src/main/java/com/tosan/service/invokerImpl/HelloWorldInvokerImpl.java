@@ -20,6 +20,6 @@ public class HelloWorldInvokerImpl implements HelloWorldInvoker {
         if (name == null) {
             return "Hello Stranger";
         }
-        return serviceUtil.getCutCamelCasesBySpace(name);
+        return "Hello " + serviceUtil.getCutCamelCasesBySpace(name);
     }
 }
