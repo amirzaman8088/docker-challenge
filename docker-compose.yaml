@@ -1,0 +1,10 @@
+version: '3.2'
+services:
+  docker-challenge:
+    image: docker-challenge-image
+    container_name: docker-challenge-container
+    build: .
+    ports:
+      - 8081:8080
+    volumes:
+      - ./src/main/resources/config/application.properties:/docker-challenge/config/application.properties
