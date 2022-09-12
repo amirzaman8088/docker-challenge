@@ -46,6 +46,25 @@ test localhost:8081/author
 host log:
 ![author-host](images/author-host.png)
 
+#### Deploy to kubernetes
+For deploy to kubernetes first of all , I run a local registry to push my image too it.
+After that I create two files : pod.yaml , service.yaml
+
+pod.yaml is used for deploy the image of my app too kubernetes. it has terminationGracePeriodSeconds tag to set 
+graceful shutdown for pod.
+apply pod.yaml to kubernetes like this:
+
+![pod.png](images/pod.png)
+
+![pods.png](images/pods.png)
+
+service.yaml is used for loadbalancing and expose the app outside the cluster.
+apply service.yaml like below:
+
+![service.png](images/service.png)
+
+![services.png](images/services.png)
+
 
 
 
